@@ -2,7 +2,9 @@
 
 ## Halaman yang Telah Dibuat adalah crud project
 
-cara akses fitur adalah dengan localhost:3000/crud
+cara akses fitur adalah dengan localhost:3000/login
+setelah login maka akan diarahkan ke halaman dashboard
+
 
 ## Environment Variables Required
 
@@ -16,19 +18,25 @@ DIRECT_URL="postgresql://postgres:postgres@localhost:51214/template1?sslmode=dis
 
 1. **Tambahkan .env ke local
 
-2. **Generate Prisma Client:**
+2. npm install
+
+3. **Generate Prisma Client:**
   
    npx prisma generate
 
-3. **Run Database Migration:**
+4. **Run Database Migration:**
  
    npm run db:migrate
 
-4. **Seed the Database:**
+5. **Seed the Database:**
   
    npm run db:seed
 
-5. **Start the Development Server:**
+6. **Start the Development Server:**
   
    npm run dev
+
+7.  **Buat user baru
+
+8. **Login dengan user baru
 
