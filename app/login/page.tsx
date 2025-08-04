@@ -25,10 +25,10 @@ export default function LoginPage() {
 
       if (result?.error) {
         setError("Invalid credentials");
-      } else {
-        router.push("/");
-        router.refresh();
-      }
+        } else {
+          router.push("/dashboard");
+          router.refresh();
+        }
     } catch (error) {
       setError("An error occurred during login");
     } finally {

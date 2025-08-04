@@ -17,9 +17,13 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
+  if (request.nextUrl.pathname.startsWith('/api/auth')) {
+    console.log(`Auth API request: ${request.method} ${request.nextUrl.pathname}`);
+  }
+
   return null;
 }
 
 export const config = {
-  matcher: ['/crud/:path*', '/login', '/register']
+  matcher: ['/crud/:path*', '/login', '/register', '/api/auth/:path*']
 };

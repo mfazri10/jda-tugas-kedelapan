@@ -17,7 +17,7 @@ export default function Navigation() {
           </div>
           <div className="flex space-x-8 items-center">
             <Link
-              href="/"
+              href={session ? "/dashboard" : "/"}
               className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Home
@@ -39,12 +39,6 @@ export default function Navigation() {
               className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Contact
-            </Link>
-            <Link
-              href="/crud"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-            >
-              CRUD
             </Link>
             
             {status === "loading" ? (
